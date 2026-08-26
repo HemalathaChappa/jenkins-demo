@@ -12,9 +12,18 @@ pipeline {
 
           stage('Build React App') {
               steps {
-                  bat 'npm run build' 
-              }
-           }
-        }
-     }  
+                  bat 'npm run build'
+              }   
 
+           }
+           
+           stage('Deploy React App') {
+               steps {
+                   bat 'start /B npx serve -s dist -l 3000' 
+
+ 
+               }
+            }
+         }
+      }  
+            
