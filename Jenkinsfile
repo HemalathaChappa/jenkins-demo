@@ -19,7 +19,7 @@ pipeline {
            
            stage('Deploy React App') {
                steps {
-                   bat 'set JENKINS_NODE_COOKIE=dontKillMe && start "" /B npx serve -s dist -l 3000' 
+                   bat 'start "" /B cmd /c "npx serve -s dist -l 3000" ' 
 
  
                }
