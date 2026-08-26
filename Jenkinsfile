@@ -19,7 +19,7 @@ pipeline {
            
            stage('Deploy React App') {
                steps {
-                   bat 'start "" /B cmd /c "npx serve -s dist -l 3000" ' 
+                   bat 'start "" /B cmd /c "npm run preview -- --host 0.0.0.0 --port 3000" ' 
 
  
                }
